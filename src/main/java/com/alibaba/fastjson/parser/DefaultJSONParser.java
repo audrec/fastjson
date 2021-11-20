@@ -119,7 +119,7 @@ public class DefaultJSONParser implements Closeable {
 
     /**
      * @deprecated
-     * @see setDateFormat
+     * @see #setDateFormat
      */
     public void setDateFomrat(DateFormat dateFormat) {
         this.setDateFormat(dateFormat);
@@ -1158,7 +1158,7 @@ public class DefaultJSONParser implements Closeable {
         }
 
         if (parsedObject == null) {
-            return null;
+            throw new JSONException("object can't be null");
         }
 
         return new JSONObject((Map) parsedObject);

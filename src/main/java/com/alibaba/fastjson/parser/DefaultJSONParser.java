@@ -1144,6 +1144,13 @@ public class DefaultJSONParser implements Closeable {
         }
     }
 
+    /**
+     * A method to parse the input object to the corresponding JSON object.
+     * @param object
+     * @return Object being parsed in the JSON format.
+     */
+
+    // CS 427 Issue link: https://github.com/alibaba/fastjson/issues/3746
     @SuppressWarnings("rawtypes")
     public Object parseObject(final Map object) {
         return parseObject(object, null);
